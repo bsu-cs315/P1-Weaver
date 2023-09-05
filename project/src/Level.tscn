@@ -21,7 +21,6 @@ sources/0 = SubResource("TileSetAtlasSource_smm1s")
 script = ExtResource("1_3q20k")
 
 [node name="Circle" parent="." instance=ExtResource("2_ntlo4")]
-strength = 1500.0
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(577, 575)
