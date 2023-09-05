@@ -12,12 +12,14 @@ func _input(event):
 		dragging = false
 		var drag_end = get_global_mouse_position()
 		var launch_dir = drag_start - drag_end
-		print (launch_dir.angle())
 		if launch_dir.angle() < -(PI/2) or launch_dir.angle() > PI/2:
 			apply_central_impulse(Vector2(0,1) * 5 * launch_dir)
-			print ("this")
 		elif launch_dir.angle() < PI/2 && launch_dir.angle() > 0:
 			apply_central_impulse(Vector2(1,0) * 5 * launch_dir)
-			print ("that")
 		else:
 			apply_central_impulse(launch_dir * 5)
+
+
+func _on_body_entered(body):
+	if body.is_in_group("box"):
+		print ("Nice Shot!")
