@@ -1,7 +1,7 @@
 # Project 1 Iteration 1: Launcher Game
 A project by Kc Weaver.
 
-## How To PLay
+## How To Play
     Click and drag the circle back and release to launch the projectile at the boxes.
     Force corresponds to drag distance and you may only launch between zero and ninety degrees.
 
