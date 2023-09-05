@@ -3,7 +3,7 @@ A project by Kc Weaver.
 
 ## How To PLay
     Click and drag the circle back and release to launch the projectile at the boxes.
-    Force corresponds to drag distance and you can only launch between zero and ninety degrees.
+    Force corresponds to drag distance and you may only launch between zero and ninety degrees.
 
 
 
