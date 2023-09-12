@@ -5,9 +5,12 @@ var dragging
 var drag_start = Vector2()
 var disabler = 0
 
+
+
 var sleep_counter = 0
 
 signal circle_stop
+signal point_score
 
 
 
@@ -36,13 +39,7 @@ func _input(event):
 func _on_body_entered(body):
 	if body.is_in_group("box"):
 		$BoxHitSFX.play()
-
-
-
-
-
-
-
+		emit_signal("point_score")
 
 func _on_sleeping_state_changed():
 	
