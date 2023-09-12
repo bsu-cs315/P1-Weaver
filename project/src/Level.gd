@@ -17,7 +17,7 @@ func inst(pos):
 
 func on_state_changed():
 	
-	$Timer.start(7)
+	$Timer.start(5)
 
 	
 
@@ -25,3 +25,8 @@ func _on_timer_timeout():
 	
 	remove_child($Circle)
 	inst(Vector2(400,600))
+
+func _input(event):
+	if event.is_action_pressed("new_ball"):
+		remove_child($Circle)
+		inst(Vector2(400,600))

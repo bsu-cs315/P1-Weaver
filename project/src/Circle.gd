@@ -12,7 +12,7 @@ signal circle_stop
 
 
 func _input(event):
-	print (disabler)
+	
 	if disabler < 1:
 		if event.is_action_pressed("click") and not dragging:
 			dragging = true
@@ -44,7 +44,7 @@ func _on_body_entered(body):
 
 
 func _on_sleeping_state_changed():
-	print("hi")
+	
 	if sleep_counter % 2 == 1:
 		emit_signal("circle_stop")
 	sleep_counter += 1
