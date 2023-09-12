@@ -19,6 +19,7 @@ func _input(event):
 			drag_start = get_global_mouse_position()
 			
 		if event.is_action_released("click") and dragging:
+			$PlayerFireSFX.play()
 			dragging = false
 			var drag_end = get_global_mouse_position()
 			var launch_dir = drag_start - drag_end
@@ -34,7 +35,7 @@ func _input(event):
 
 func _on_body_entered(body):
 	if body.is_in_group("box"):
-		print ("Nice Shot!")
+		$BoxHitSFX.play()
 
 
 
@@ -48,3 +49,6 @@ func _on_sleeping_state_changed():
 	if sleep_counter % 2 == 1:
 		emit_signal("circle_stop")
 	sleep_counter += 1
+	
+	
+

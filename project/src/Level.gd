@@ -16,13 +16,10 @@ func inst(pos):
 		
 
 func on_state_changed():
-	
 	$Timer.start(5)
 
-	
 
 func _on_timer_timeout():
-	
 	remove_child($Circle)
 	inst(Vector2(400,600))
 
