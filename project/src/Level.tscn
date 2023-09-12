@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://bbgp5o517l7a1"]
+[gd_scene load_steps=6 format=3 uid="uid://bbgp5o517l7a1"]
 
 [ext_resource type="Script" path="res://src/Level.gd" id="1_3q20k"]
 [ext_resource type="Texture2D" uid="uid://b4ufxm2k0qrpb" path="res://Assets/Images/elementMetal011.png" id="2_8xeft"]
-[ext_resource type="PackedScene" uid="uid://b43rh05eki5vt" path="res://src/Circle.tscn" id="2_ntlo4"]
 [ext_resource type="PackedScene" uid="uid://cqiavfboqb4t6" path="res://src/Box.tscn" id="4_vqm2j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_smm1s"]
@@ -20,9 +19,6 @@ sources/0 = SubResource("TileSetAtlasSource_smm1s")
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_3q20k")
-
-[node name="Circle" parent="." instance=ExtResource("2_ntlo4")]
-position = Vector2(271, 272)
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(645, 593)
@@ -50,3 +46,8 @@ position = Vector2(1069, 328)
 
 [node name="Box6" parent="Boxes" instance=ExtResource("4_vqm2j")]
 position = Vector2(1069, 256)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

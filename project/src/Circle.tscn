@@ -8,6 +8,7 @@
 [node name="Circle" type="RigidBody2D" groups=["Player"]]
 max_contacts_reported = 1
 contact_monitor = true
+linear_damp = 0.2
 script = ExtResource("1_d53a6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -18,3 +19,4 @@ shape = SubResource("CircleShape2D_2emm3")
 texture = ExtResource("1_fc203")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="sleeping_state_changed" from="." to="." method="_on_sleeping_state_changed"]
