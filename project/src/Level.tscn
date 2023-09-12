@@ -28,25 +28,25 @@ position = Vector2(271, 272)
 position = Vector2(645, 593)
 tile_set = SubResource("TileSet_v6amt")
 format = 2
-layer_0/tile_data = PackedInt32Array(65527, 0, 0, 65528, 0, 0, 65529, 0, 0, 65530, 0, 0, 65531, 0, 0, 65532, 0, 0, 65533, 0, 0, 65534, 0, 0, 65535, 0, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0)
+layer_0/tile_data = PackedInt32Array(8, 0, 0, 65526, 0, 0, -10, 0, 0, -65546, 0, 0, -131082, 0, 0, -196618, 0, 0, -262154, 0, 0, -327690, 0, 0, -393226, 0, 0, -458762, 0, 0, -524298, 0, 0, -524297, 0, 0, -524296, 0, 0, -524295, 0, 0, -524294, 0, 0, -65528, 0, 0, -131064, 0, 0, -196600, 0, 0, -262136, 0, 0, -327672, 0, 0, -393208, 0, 0, -458744, 0, 0, -524280, 0, 0, -589816, 0, 0, -589817, 0, 0, -589818, 0, 0, -589819, 0, 0, -589820, 0, 0, -589821, 0, 0, -589822, 0, 0, -589823, 0, 0, -589824, 0, 0, -524289, 0, 0, -524290, 0, 0, -524291, 0, 0, -524292, 0, 0, -524293, 0, 0, 65544, 0, 0, 65543, 0, 0, 65542, 0, 0, 65541, 0, 0, 65540, 0, 0, 65539, 0, 0, 65538, 0, 0, 65537, 0, 0, 65536, 0, 0, 131071, 0, 0, 131070, 0, 0, 131069, 0, 0, 131068, 0, 0, 131067, 0, 0, 131066, 0, 0, 131065, 0, 0, 131064, 0, 0, 131063, 0, 0, 131062, 0, 0)
 
 [node name="Boxes" type="Node2D" parent="."]
 position = Vector2(16, 11)
 
 [node name="Box" parent="Boxes" instance=ExtResource("4_vqm2j")]
-position = Vector2(1074, 545)
+position = Vector2(1070, 613)
 
 [node name="Box2" parent="Boxes" instance=ExtResource("4_vqm2j")]
-position = Vector2(1072, 472)
+position = Vector2(1068, 540)
 
 [node name="Box3" parent="Boxes" instance=ExtResource("4_vqm2j")]
-position = Vector2(1073, 401)
+position = Vector2(1069, 469)
 
 [node name="Box4" parent="Boxes" instance=ExtResource("4_vqm2j")]
-position = Vector2(1072, 330)
+position = Vector2(1068, 398)
 
 [node name="Box5" parent="Boxes" instance=ExtResource("4_vqm2j")]
-position = Vector2(1073, 260)
+position = Vector2(1069, 328)
 
 [node name="Box6" parent="Boxes" instance=ExtResource("4_vqm2j")]
-position = Vector2(1073, 188)
+position = Vector2(1069, 256)

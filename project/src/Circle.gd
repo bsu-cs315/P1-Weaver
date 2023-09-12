@@ -12,12 +12,12 @@ func _input(event):
 		dragging = false
 		var drag_end = get_global_mouse_position()
 		var launch_dir = drag_start - drag_end
-		if launch_dir.angle() < -(PI/2) or launch_dir.angle() > PI/2:
-			apply_central_impulse(Vector2(0,1) * 5 * launch_dir)
-		elif launch_dir.angle() < PI/2 && launch_dir.angle() > 0:
-			apply_central_impulse(Vector2(1,0) * 5 * launch_dir)
-		else:
-			apply_central_impulse(launch_dir * 5)
+#		if launch_dir.angle() < -(PI/2) or launch_dir.angle() > PI/2:
+#			apply_central_impulse(Vector2(0,1) * 5 * launch_dir)
+#		elif launch_dir.angle() < PI/2 && launch_dir.angle() > 0:
+#			apply_central_impulse(Vector2(1,0) * 5 * launch_dir)
+#		else:
+		apply_central_impulse(launch_dir * 5)
 
 
 func _on_body_entered(body):
