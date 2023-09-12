@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bbgp5o517l7a1"]
+[gd_scene load_steps=7 format=3 uid="uid://bbgp5o517l7a1"]
 
 [ext_resource type="Script" path="res://src/Level.gd" id="1_3q20k"]
 [ext_resource type="Texture2D" uid="uid://b4ufxm2k0qrpb" path="res://Assets/Images/elementMetal011.png" id="2_8xeft"]
+[ext_resource type="Texture2D" uid="uid://dcvgnodhqrg8i" path="res://Assets/Images/blue_shroom.png" id="4_mpvuv"]
 [ext_resource type="PackedScene" uid="uid://cqiavfboqb4t6" path="res://src/Box.tscn" id="4_vqm2j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_smm1s"]
@@ -18,6 +19,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_smm1s")
 
 [node name="Level" type="Node2D"]
+position = Vector2(46, 14)
 script = ExtResource("1_3q20k")
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -53,35 +55,50 @@ wait_time = 0.001
 [node name="Hud" type="CanvasLayer" parent="."]
 
 [node name="ScoreLabel" type="Label" parent="Hud"]
-offset_left = 50.0
-offset_top = 50.0
-offset_right = 221.0
-offset_bottom = 141.0
+offset_left = 96.0
+offset_top = 64.0
+offset_right = 285.0
+offset_bottom = 155.0
 theme_override_font_sizes/font_size = 64
 text = "Score:"
+metadata/_edit_use_anchors_ = true
 
 [node name="ScoreValue" type="Label" parent="Hud"]
-offset_left = 240.0
-offset_top = 50.0
-offset_right = 411.0
-offset_bottom = 141.0
+offset_left = 286.0
+offset_top = 64.0
+offset_right = 457.0
+offset_bottom = 155.0
 theme_override_font_sizes/font_size = 64
 text = "0"
+metadata/_edit_use_anchors_ = true
 
 [node name="CircleCount" type="Label" parent="Hud"]
-offset_left = 1130.0
-offset_top = 50.0
-offset_right = 1170.0
-offset_bottom = 141.0
+offset_left = 1176.0
+offset_top = 64.0
+offset_right = 1216.0
+offset_bottom = 155.0
 theme_override_font_sizes/font_size = 64
 text = "3"
+metadata/_edit_use_anchors_ = true
 
 [node name="CountLabel" type="Label" parent="Hud"]
-offset_left = 900.0
-offset_top = 50.0
-offset_right = 1121.0
-offset_bottom = 141.0
+offset_left = 946.0
+offset_top = 64.0
+offset_right = 1167.0
+offset_bottom = 155.0
 theme_override_font_sizes/font_size = 64
 text = "Ammo:"
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+show_behind_parent = true
+visibility_layer = 524288
+offset_left = -47.0
+offset_top = -34.0
+offset_right = 977.0
+offset_bottom = 990.0
+scale = Vector2(1.52, 0.84)
+texture = ExtResource("4_mpvuv")
+metadata/_edit_use_anchors_ = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

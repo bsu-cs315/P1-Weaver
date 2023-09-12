@@ -21,22 +21,22 @@ func inst(pos):
 
 
 func update_score():
-	print (score)
 	score += 100
 	$Hud/ScoreValue.text = str(score)
+
 
 func on_state_changed():
 	$Timer.start(5)
 
 	
-
 func _on_timer_timeout():
 	remove_child($Circle)
 	inst(Vector2(400,600))
 
 func _input(event):
-	if event.is_action_pressed("new_ball"):
-		remove_child($Circle)
-		inst(Vector2(400,600))
+	if circleCounter > 0:
+		if event.is_action_pressed("new_ball"):
+			remove_child($Circle)
+			inst(Vector2(400,600))
 		
 
