@@ -2,7 +2,7 @@ extends Control
 
 
 func _ready():
-	#await get_tree().create_timer(1).timeout
+
 	var tween = get_tree().create_tween().set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_IN_OUT)
 	tween.tween_property($TitleTextGods, "position", Vector2(637.5, 100), 1)
 	

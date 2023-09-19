@@ -55,15 +55,6 @@ wait_time = 0.001
 
 [node name="Hud" type="CanvasLayer" parent="."]
 
-[node name="ScoreLabel" type="Label" parent="Hud"]
-offset_left = 96.0
-offset_top = 64.0
-offset_right = 285.0
-offset_bottom = 155.0
-theme_override_font_sizes/font_size = 64
-text = "Score:"
-metadata/_edit_use_anchors_ = true
-
 [node name="ScoreValue" type="Label" parent="Hud"]
 offset_left = 286.0
 offset_top = 64.0
@@ -91,6 +82,30 @@ theme_override_font_sizes/font_size = 64
 text = "Ammo:"
 metadata/_edit_use_anchors_ = true
 
+[node name="MenuButton" type="Button" parent="Hud"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -89.0
+offset_top = -34.0
+offset_right = 97.0
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 64
+text = "Menu"
+
+[node name="ScoreLabel" type="Label" parent="Hud"]
+offset_left = 96.0
+offset_top = 64.0
+offset_right = 285.0
+offset_bottom = 155.0
+theme_override_font_sizes/font_size = 64
+text = "Score:"
+metadata/_edit_use_anchors_ = true
+
 [node name="TextureRect" type="TextureRect" parent="."]
 show_behind_parent = true
 visibility_layer = 524288
@@ -106,3 +121,4 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(101, 602)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Hud/MenuButton" to="." method="_on_menu_button_pressed"]
