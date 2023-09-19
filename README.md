@@ -2,32 +2,25 @@
 A project by Kc Weaver.
 
 ## How To Play
-- Click and drag the circle back and release to launch the projectile at the boxes for points.
+- Click play on the main menu to begin the game.
+- Click and drag the circle back and release to launch the projectile at the crates for points.
 - Force corresponds to drag distance and you may only launch between zero and ninety degrees.
 - You only get three shots, use "r" to reload.
-- Do not attempt to reload after ball has stopped rolling.
-      - This will result in a "double reload" costing an additional ammo
-
+- Press r again to prompt the main menu button
 
 
 ## Third-Party Assets
 
-
-
-Images are from "Physics Assets". Created in 2014 by kenney.nl,
-[CC0 1.0 Universal](http://creativecommons.org/publicdomain/zero/1.0/). Source:
-https://www.kenney.nl/assets/physics-assets
-
-
+All music and art created by Kc Weaver
 
 ## Project Report
 
 ### Reflection
-The most difficult part of this iteration was determining how to best format the project.
-I spent a lot of time determining which functions should go where in which scripts before I was finally able to get it working.
-The biggest hurdle was getting the ball to reinstate after being shot, while keeping properties like the score intact.
-I found ways around my problems through creating custom signals in the circle script that let the level know when the circle has stopped if it has hit a box.
-I found adding sounds to be an easy and fun process that I look forward to doing more in the future. To improve, I will add destructable boxes, more UI elements, and sound effects.
+Most of this iteration was spent dealing with warnings and errors. I had trouble renaming most of my files no matter the fix i employed.
+Some solutions worked for some files but not for others. This meant that an equal half of the process was working backward from what I'd done so far.
+I also encountered issues where code that had worked before stopped working and I couldn't figure out quite why before I fixed it on accident.
+I should have spent more time with this iteration, but the most valuable take away I have is the knowledge I've gained.
+If I were to start a project from the ground up again, I can think of dozens of ways to save trouble later. 
 
 ### Self-Assessment
 
@@ -37,13 +30,14 @@ I found adding sounds to be an easy and fun process that I look forward to doing
 - [X] C-2: Your release is tagged using <a href="https://semver.org/">semantic versioning</a> where the major version is zero, the minor version is the iteration number, the patch version is incremented as usual for each change made to the minor version, and the release name matches the release tag.
 - [X] C-3: You have a clear legal right to use all incorporated assets, the licenses for all third-party assets are tracked in the <code>README.md</code> file, and you have satisfied all license requirements.
 - [X] C-4: Either the <code>README.md</code> contains instructions for how to play the game or such instructions are incorporated into the game.
-- [X] C-5: The projectile and targets are shown with 2D graphics.
-- [X] C-6: The game plays an appropriate sound effect when the projectile is fired, and the sound effect is correctly stored as a <code>.wav</code> asset.
+- [X] C-5: The game starts on a title screen. Interacting with the title screen moves the player into the gameplay screen.
 - [X] B-1: The project report is complete.
 - [X] B-2: Earn one star.
-- [X] A-1: Earn three stars.
-- [X] ⭐ The player has a small inventory of projectiles, and only one can be launched at a time.
-- [X] ⭐ The background and ground use 2D graphics.
-- [X] ⭐ A <abbr title="Heads-Up Display">HUD</abbr> shows the current game state such as the score and number of projectiles remaining.
+- [X] A-1: Generate neither warnings nor errors at runtime.
+- [X] A-2: Earn three stars.
+- [X] ⭐ When the game is over, the player can interact to take the game back to the title screen, from which the game can be played again.
+- [X] ⭐ Use an <code>AnimationPlayer</code> or <code>Tween</code> to add some pop to the player experience.
+- [X] ⭐ The source code complies with <a href="https://www.gdquest.com/docs/guidelines/best-practices/godot-gdscript/"> the GDScript guidelines</a>.
+
 
 This work therefore merits an A. 
