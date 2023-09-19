@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://cjmj0jvpsemee"]
+
+[ext_resource type="Script" path="res://src/scenes/circle.gd" id="1_4gx06"]
+[ext_resource type="Texture2D" uid="uid://d2o0kge6xsbur" path="res://src/planets/planet2.png" id="2_s218l"]
+[ext_resource type="AudioStream" uid="uid://bld7pdhf2skki" path="res://src/sounds/player_fire.wav" id="3_phnfs"]
+[ext_resource type="AudioStream" uid="uid://cthbskxss5sxg" path="res://src/sounds/crate_hit.wav" id="4_qf7uw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2emm3"]
+
+[node name="CircleFree" type="RigidBody2D" groups=["Player"]]
+max_contacts_reported = 1
+contact_monitor = true
+linear_damp = 0.2
+script = ExtResource("1_4gx06")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(3, 3)
+shape = SubResource("CircleShape2D_2emm3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_s218l")
+
+[node name="PlayerFireSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_phnfs")
+
+[node name="BoxHitSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_qf7uw")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="sleeping_state_changed" from="." to="." method="_on_sleeping_state_changed"]

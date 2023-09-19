@@ -7,18 +7,18 @@ var disabler = 0
 
 var rng = RandomNumberGenerator.new()
 
+
 var sleep_counter = 0
 
 signal circle_stop
 signal point_score
 
-
 func _ready():
 	var sprite1 = "res://src/planets/planet1.png"
 	var sprite2 = "res://src/planets/planet2.png"
 	var sprite3 = "res://src/planets/planet3.png"
-	rng.randomize()
 	
+	rng.randomize()
 	var chosen_sprite = rng.randi_range(1,3)
 	if chosen_sprite == 1:
 		$Sprite2D.texture = load(sprite1)
@@ -26,7 +26,6 @@ func _ready():
 		$Sprite2D.texture = load(sprite2)
 	else:
 		$Sprite2D.texture = load(sprite3)
-	
 	
 func _input(event):
 	if disabler < 1:
