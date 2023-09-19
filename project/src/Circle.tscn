@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://b43rh05eki5vt"]
 
 [ext_resource type="Script" path="res://src/Circle.gd" id="1_d53a6"]
-[ext_resource type="Texture2D" uid="uid://cuq57abvsbpr1" path="res://Assets/Images/alienGreen_round.png" id="1_fc203"]
+[ext_resource type="Texture2D" uid="uid://db3hdihwq6x58" path="res://Assets/Images/Planet1.png" id="2_fnv5u"]
 [ext_resource type="AudioStream" uid="uid://bld7pdhf2skki" path="res://Assets/Sounds/player_fire.wav" id="3_a2svr"]
 [ext_resource type="AudioStream" uid="uid://cthbskxss5sxg" path="res://Assets/Sounds/crate_hit.wav" id="4_qbetd"]
 
@@ -18,7 +18,8 @@ scale = Vector2(3, 3)
 shape = SubResource("CircleShape2D_2emm3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_fc203")
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_fnv5u")
 
 [node name="PlayerFireSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_a2svr")

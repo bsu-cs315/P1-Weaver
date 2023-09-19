@@ -26,17 +26,18 @@ func inst(pos):
 func update_score():
 	score += 100
 	$Hud/ScoreValue.text = str(score)
-	
 
 
 func on_state_changed():
-	print ("hi")
-	$Timer.start(1)
-
 	
+	$Timer.start(5)
+
+	if circleCounter <= 0:
+		var menuButton = $Hud/MenuButton
+		menuButton.visible = true
 	
 func _on_timer_timeout():
-	print ("hey")
+	
 	remove_child($Circle)
 	inst(Vector2(400,600))
 
