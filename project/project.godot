@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Cs315Project1Iteration1KcWeaver"
-run/main_scene="res://src/Level.tscn"
+run/main_scene="res://src/scenes/level.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 

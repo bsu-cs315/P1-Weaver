@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ba3nw3n84w42h"
-path="res://.godot/imported/GODS.png-313e7492da1c09dc5319294d1ff20ffc.ctex"
+uid="uid://n562beqsnne2"
+path="res://.godot/imported/back_ground.png-30d776f9c8fb828bb5633d44133b5dc1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/GODS.png"
-dest_files=["res://.godot/imported/GODS.png-313e7492da1c09dc5319294d1ff20ffc.ctex"]
+source_file="res://src/level/back_ground.png"
+dest_files=["res://.godot/imported/back_ground.png-30d776f9c8fb828bb5633d44133b5dc1.ctex"]
 
 [params]
 

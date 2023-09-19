@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cthbskxss5sxg"
-path="res://.godot/imported/crate_hit.wav-85e63764f30bdadcd3c4e01ca79c8988.sample"
+path="res://.godot/imported/crate_hit.wav-a007788cd42405aa4adfda83c412675e.sample"
 
 [deps]
 
-source_file="res://Assets/Sounds/crate_hit.wav"
-dest_files=["res://.godot/imported/crate_hit.wav-85e63764f30bdadcd3c4e01ca79c8988.sample"]
+source_file="res://src/sounds/crate_hit.wav"
+dest_files=["res://.godot/imported/crate_hit.wav-a007788cd42405aa4adfda83c412675e.sample"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c572m4uok3p8"
-path="res://.godot/imported/MapCrate.png-e31f5d368049619047abc23b30765166.ctex"
+uid="uid://d2o0kge6xsbur"
+path="res://.godot/imported/planet1.png-a028f6d5eece5188e03b599dc93c9642.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/MapCrate.png"
-dest_files=["res://.godot/imported/MapCrate.png-e31f5d368049619047abc23b30765166.ctex"]
+source_file="res://src/planets/planet1.png"
+dest_files=["res://.godot/imported/planet1.png-a028f6d5eece5188e03b599dc93c9642.ctex"]
 
 [params]
 

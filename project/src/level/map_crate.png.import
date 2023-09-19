@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3u7cr418d3b1"
-path="res://.godot/imported/PointCrate.png-7b2efd95155aba41f551c1c851b01745.ctex"
+uid="uid://c572m4uok3p8"
+path="res://.godot/imported/map_crate.png-ffb1e0656ecc1660f6cb6502e4710582.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Images/PointCrate.png"
-dest_files=["res://.godot/imported/PointCrate.png-7b2efd95155aba41f551c1c851b01745.ctex"]
+source_file="res://src/level/map_crate.png"
+dest_files=["res://.godot/imported/map_crate.png-ffb1e0656ecc1660f6cb6502e4710582.ctex"]
 
 [params]
 

@@ -1,9 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://b43rh05eki5vt"]
+[gd_scene load_steps=6 format=3 uid="uid://dnk0xyvnnt4fe"]
 
-[ext_resource type="Script" path="res://src/Circle.gd" id="1_d53a6"]
-[ext_resource type="Texture2D" uid="uid://db3hdihwq6x58" path="res://Assets/Images/Planet1.png" id="2_fnv5u"]
-[ext_resource type="AudioStream" uid="uid://bld7pdhf2skki" path="res://Assets/Sounds/player_fire.wav" id="3_a2svr"]
-[ext_resource type="AudioStream" uid="uid://cthbskxss5sxg" path="res://Assets/Sounds/crate_hit.wav" id="4_qbetd"]
+[ext_resource type="Script" path="res://src/scenes/circle.gd" id="1_kuhqi"]
+[ext_resource type="Texture2D" uid="uid://d2o0kge6xsbur" path="res://src/planets/planet2.png" id="2_2nubs"]
+[ext_resource type="AudioStream" uid="uid://bld7pdhf2skki" path="res://src/sounds/player_fire.wav" id="3_mb37l"]
+[ext_resource type="AudioStream" uid="uid://cthbskxss5sxg" path="res://src/sounds/crate_hit.wav" id="4_lat2j"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2emm3"]
 
@@ -11,7 +11,7 @@
 max_contacts_reported = 1
 contact_monitor = true
 linear_damp = 0.2
-script = ExtResource("1_d53a6")
+script = ExtResource("1_kuhqi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(3, 3)
@@ -19,13 +19,13 @@ shape = SubResource("CircleShape2D_2emm3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("2_fnv5u")
+texture = ExtResource("2_2nubs")
 
 [node name="PlayerFireSFX" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_a2svr")
+stream = ExtResource("3_mb37l")
 
 [node name="BoxHitSFX" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_qbetd")
+stream = ExtResource("4_lat2j")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="sleeping_state_changed" from="." to="." method="_on_sleeping_state_changed"]

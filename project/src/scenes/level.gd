@@ -1,6 +1,6 @@
 extends Node2D
 
-var circle = preload("res://src/Circle.tscn")
+var circle = preload("res://src/scenes/Circle.tscn")
 var circleCounter = 3
 var score = 0
 
@@ -54,4 +54,4 @@ func _input(event):
 
 
 func _on_menu_button_pressed():
-	get_tree().change_scene_to_file("res://src/menu.tscn")
+	get_tree().change_scene_to_file("res://src/scenes/menu.tscn")

@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://db2bnqdg3sesv"]
 
-[ext_resource type="Script" path="res://src/Menu.gd" id="1_mo02u"]
-[ext_resource type="Texture2D" uid="uid://ba3nw3n84w42h" path="res://Assets/Images/GODS.png" id="2_417do"]
-[ext_resource type="Texture2D" uid="uid://4ftgprhg5wdu" path="res://Assets/Images/Green.png" id="3_b0as3"]
-[ext_resource type="Texture2D" uid="uid://cpispagobl3q3" path="res://Assets/Images/Earths.png" id="4_ok88l"]
-[ext_resource type="AudioStream" uid="uid://bvb1hhi50ubdv" path="res://Assets/Sounds/MenuMusic.mp3" id="5_qssv8"]
+[ext_resource type="Script" path="res://src/scenes/menu.gd" id="1_nhm72"]
+[ext_resource type="Texture2D" uid="uid://ba3nw3n84w42h" path="res://src/menu/gods.png" id="2_jyci7"]
+[ext_resource type="Texture2D" uid="uid://4ftgprhg5wdu" path="res://src/menu/green.png" id="3_kepmg"]
+[ext_resource type="Texture2D" uid="uid://cpispagobl3q3" path="res://src/menu/earths.png" id="4_0dfdc"]
+[ext_resource type="AudioStream" uid="uid://bvb1hhi50ubdv" path="res://src/sounds/menu_music.mp3" id="5_qukv3"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -13,7 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_mo02u")
+script = ExtResource("1_nhm72")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -45,20 +45,20 @@ text = "Quit"
 [node name="TitleTextGods" type="Sprite2D" parent="."]
 position = Vector2(637.5, 0)
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("2_417do")
+texture = ExtResource("2_jyci7")
 
 [node name="TitleTextGreen" type="Sprite2D" parent="."]
 position = Vector2(637.5, 0)
 scale = Vector2(0.4, 0.4)
-texture = ExtResource("3_b0as3")
+texture = ExtResource("3_kepmg")
 
 [node name="TitleTextEarths" type="Sprite2D" parent="."]
 position = Vector2(637.5, 0)
 scale = Vector2(0.3, 0.3)
-texture = ExtResource("4_ok88l")
+texture = ExtResource("4_0dfdc")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_qssv8")
+stream = ExtResource("5_qukv3")
 autoplay = true
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]

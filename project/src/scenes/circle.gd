@@ -14,9 +14,9 @@ signal circle_stop
 signal point_score
 
 func _ready():
-	var sprite1 = "res://Assets/Images/Planet1.png" 
-	var sprite2 = "res://Assets/Images/Planet2.png" 
-	var sprite3 = "res://Assets/Images/Planet3.png" 
+	var sprite1 = "res://src/planets/planet1.png"
+	var sprite2 = "res://src/planets/planet2.png"
+	var sprite3 = "res://src/planets/planet3.png"
 	
 	rng.randomize()
 	var chosen_sprite = rng.randi_range(1,3)
@@ -38,7 +38,7 @@ func _input(event):
 			dragging = false
 			var drag_end = get_global_mouse_position()
 			var launch_dir = drag_start - drag_end
-			print (rad_to_deg(launch_dir.angle()))
+
 			if launch_dir.angle() < -(PI/2) or launch_dir.angle() > PI/2:
 				apply_central_impulse(Vector2(0,1) * 5 * launch_dir)
 			elif launch_dir.angle() < PI/2 && launch_dir.angle() > 0:
