@@ -6,7 +6,7 @@ A project by Kc Weaver.
 - Click and drag the circle back and release to launch the projectile at the crates for points.
 - Force corresponds to drag distance and you may only launch between zero and ninety degrees.
 - You only get three shots, use "r" to reload.
-- Press r again to prompt the main menu button
+- Press "r" again to prompt the main menu button.
 
 
 ## Third-Party Assets
