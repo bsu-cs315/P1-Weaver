@@ -1,0 +1,60 @@
+[gd_scene load_steps=5 format=3 uid="uid://db2bnqdg3sesv"]
+
+[ext_resource type="Script" path="res://Menu.gd" id="1_fyuqa"]
+[ext_resource type="Texture2D" uid="uid://ba3nw3n84w42h" path="res://Assets/Images/GODS.png" id="2_bb33t"]
+[ext_resource type="Texture2D" uid="uid://4ftgprhg5wdu" path="res://Assets/Images/Green.png" id="3_r8phm"]
+[ext_resource type="Texture2D" uid="uid://cpispagobl3q3" path="res://Assets/Images/Earths.png" id="4_shifa"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fyuqa")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -196.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Play"
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Quit"
+
+[node name="TitleTextGods" type="Sprite2D" parent="."]
+position = Vector2(637.5, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_bb33t")
+
+[node name="TitleTextGreen" type="Sprite2D" parent="."]
+position = Vector2(637.5, 0)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_r8phm")
+
+[node name="TitleTextEarths" type="Sprite2D" parent="."]
+position = Vector2(637.5, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_shifa")
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

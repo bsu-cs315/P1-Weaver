@@ -23,6 +23,7 @@ func _input(event):
 			dragging = false
 			var drag_end = get_global_mouse_position()
 			var launch_dir = drag_start - drag_end
+			print (rad_to_deg(launch_dir.angle()))
 			if launch_dir.angle() < -(PI/2) or launch_dir.angle() > PI/2:
 				apply_central_impulse(Vector2(0,1) * 5 * launch_dir)
 			elif launch_dir.angle() < PI/2 && launch_dir.angle() > 0:

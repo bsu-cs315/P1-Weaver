@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://cykpqdd7f1qxe"]
+
+[ext_resource type="Script" path="res://src/launcher.gd" id="1_ugtvw"]
+
+[node name="Launcher" type="Node2D"]
+script = ExtResource("1_ugtvw")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LaunchPoint" type="Marker2D" parent="ColorRect"]
