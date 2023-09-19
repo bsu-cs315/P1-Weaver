@@ -1,0 +1,65 @@
+[gd_scene load_steps=6 format=3 uid="uid://db2bnqdg3sesv"]
+
+[ext_resource type="Script" path="res://src/Menu.gd" id="1_mo02u"]
+[ext_resource type="Texture2D" uid="uid://ba3nw3n84w42h" path="res://Assets/Images/GODS.png" id="2_417do"]
+[ext_resource type="Texture2D" uid="uid://4ftgprhg5wdu" path="res://Assets/Images/Green.png" id="3_b0as3"]
+[ext_resource type="Texture2D" uid="uid://cpispagobl3q3" path="res://Assets/Images/Earths.png" id="4_ok88l"]
+[ext_resource type="AudioStream" uid="uid://bvb1hhi50ubdv" path="res://Assets/Sounds/MenuMusic.mp3" id="5_qssv8"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mo02u")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -196.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Play"
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Quit"
+
+[node name="TitleTextGods" type="Sprite2D" parent="."]
+position = Vector2(637.5, 0)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_417do")
+
+[node name="TitleTextGreen" type="Sprite2D" parent="."]
+position = Vector2(637.5, 0)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_b0as3")
+
+[node name="TitleTextEarths" type="Sprite2D" parent="."]
+position = Vector2(637.5, 0)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_ok88l")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_qssv8")
+autoplay = true
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
