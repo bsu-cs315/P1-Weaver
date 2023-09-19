@@ -5,11 +5,11 @@ var circleCounter = 3
 var score = 0
 
 
-
 func _ready():
 	inst(Vector2(400,600))
 	var menuButton = $Hud/MenuButton
 	menuButton.visible = false
+	
 	
 func inst(pos):
 	if circleCounter > 0:
@@ -21,7 +21,6 @@ func inst(pos):
 		$Circle.connect("circle_stop", on_state_changed)
 		$Circle.connect("point_score", update_score)
 		
-
 
 func update_score():
 	score += 100
@@ -50,8 +49,6 @@ func _input(event):
 			var menuButton = $Hud/MenuButton
 			menuButton.visible = true
 		
-
-
 
 func _on_menu_button_pressed():
 	get_tree().change_scene_to_file("res://src/scenes/menu.tscn")

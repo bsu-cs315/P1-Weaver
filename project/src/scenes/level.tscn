@@ -1,13 +1,13 @@
 [gd_scene load_steps=8 format=3 uid="uid://bbgp5o517l7a1"]
 
-[ext_resource type="Script" path="res://src/scenes/level.gd" id="1_baopc"]
-[ext_resource type="Texture2D" uid="uid://c572m4uok3p8" path="res://src/level/map_crate.png" id="2_y0mru"]
-[ext_resource type="PackedScene" uid="uid://cqiavfboqb4t6" path="res://src/scenes/box.tscn" id="3_ee3bp"]
-[ext_resource type="Texture2D" uid="uid://n562beqsnne2" path="res://src/level/back_ground.png" id="4_v8o0h"]
-[ext_resource type="AudioStream" uid="uid://b2lxjepn10d2b" path="res://src/sounds/bg_music.wav" id="5_nshmf"]
+[ext_resource type="Script" path="res://src/scenes/level.gd" id="1_tvduv"]
+[ext_resource type="Texture2D" uid="uid://c572m4uok3p8" path="res://src/level/map_crate.png" id="2_ionui"]
+[ext_resource type="PackedScene" uid="uid://cqiavfboqb4t6" path="res://src/scenes/box.tscn" id="3_h1gb0"]
+[ext_resource type="Texture2D" uid="uid://n562beqsnne2" path="res://src/level/back_ground.png" id="4_m2c24"]
+[ext_resource type="AudioStream" uid="uid://b2lxjepn10d2b" path="res://src/sounds/bg_music.wav" id="5_2tmt3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vuk8s"]
-texture = ExtResource("2_y0mru")
+texture = ExtResource("2_ionui")
 texture_region_size = Vector2i(70, 70)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -21,7 +21,7 @@ sources/2 = SubResource("TileSetAtlasSource_vuk8s")
 
 [node name="Level" type="Node2D"]
 position = Vector2(46, 14)
-script = ExtResource("1_baopc")
+script = ExtResource("1_tvduv")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(645, 589)
@@ -32,49 +32,49 @@ layer_0/tile_data = PackedInt32Array(65526, 2, 0, -65546, 2, 0, -131082, 2, 0, -
 [node name="Boxes" type="Node2D" parent="."]
 position = Vector2(16, 11)
 
-[node name="Box" parent="Boxes" instance=ExtResource("3_ee3bp")]
+[node name="Box" parent="Boxes" instance=ExtResource("3_h1gb0")]
 position = Vector2(995, 827)
 
-[node name="Box2" parent="Boxes" instance=ExtResource("3_ee3bp")]
+[node name="Box2" parent="Boxes" instance=ExtResource("3_h1gb0")]
 position = Vector2(993, 754)
 
-[node name="Box3" parent="Boxes" instance=ExtResource("3_ee3bp")]
+[node name="Box3" parent="Boxes" instance=ExtResource("3_h1gb0")]
 position = Vector2(994, 683)
 
-[node name="Box4" parent="Boxes" instance=ExtResource("3_ee3bp")]
+[node name="Box4" parent="Boxes" instance=ExtResource("3_h1gb0")]
 position = Vector2(993, 612)
 
-[node name="Box5" parent="Boxes" instance=ExtResource("3_ee3bp")]
+[node name="Box5" parent="Boxes" instance=ExtResource("3_h1gb0")]
 position = Vector2(1504, 195)
 
-[node name="Box6" parent="Boxes" instance=ExtResource("3_ee3bp")]
+[node name="Box6" parent="Boxes" instance=ExtResource("3_h1gb0")]
 position = Vector2(1504, 120)
 
-[node name="Box7" parent="Boxes" instance=ExtResource("3_ee3bp")]
+[node name="Box7" parent="Boxes" instance=ExtResource("3_h1gb0")]
 position = Vector2(1554, 546)
 
-[node name="Box8" parent="Boxes" instance=ExtResource("3_ee3bp")]
+[node name="Box8" parent="Boxes" instance=ExtResource("3_h1gb0")]
 position = Vector2(1459, 542)
 
-[node name="Box9" parent="Boxes" instance=ExtResource("3_ee3bp")]
+[node name="Box9" parent="Boxes" instance=ExtResource("3_h1gb0")]
 position = Vector2(1505, 469)
 
-[node name="Box10" parent="Boxes" instance=ExtResource("3_ee3bp")]
+[node name="Box10" parent="Boxes" instance=ExtResource("3_h1gb0")]
 position = Vector2(1497, 960)
 
-[node name="Box11" parent="Boxes" instance=ExtResource("3_ee3bp")]
+[node name="Box11" parent="Boxes" instance=ExtResource("3_h1gb0")]
 position = Vector2(1500, 888)
 
-[node name="Box12" parent="Boxes" instance=ExtResource("3_ee3bp")]
+[node name="Box12" parent="Boxes" instance=ExtResource("3_h1gb0")]
 position = Vector2(1620, 960)
 
-[node name="Box13" parent="Boxes" instance=ExtResource("3_ee3bp")]
+[node name="Box13" parent="Boxes" instance=ExtResource("3_h1gb0")]
 position = Vector2(1623, 888)
 
-[node name="Box14" parent="Boxes" instance=ExtResource("3_ee3bp")]
+[node name="Box14" parent="Boxes" instance=ExtResource("3_h1gb0")]
 position = Vector2(416, 471)
 
-[node name="Box15" parent="Boxes" instance=ExtResource("3_ee3bp")]
+[node name="Box15" parent="Boxes" instance=ExtResource("3_h1gb0")]
 position = Vector2(419, 399)
 
 [node name="Timer" type="Timer" parent="."]
@@ -142,11 +142,11 @@ offset_right = 3057.0
 offset_bottom = 2285.0
 rotation = 3.14159
 scale = Vector2(2.03627, 1.24468)
-texture = ExtResource("4_v8o0h")
+texture = ExtResource("4_m2c24")
 metadata/_edit_use_anchors_ = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_nshmf")
+stream = ExtResource("5_2tmt3")
 autoplay = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

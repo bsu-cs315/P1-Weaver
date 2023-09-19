@@ -59,6 +59,7 @@ texture = ExtResource("4_0dfdc")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_qukv3")
+volume_db = -15.0
 autoplay = true
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
